@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reports - Software Development Document Environment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { background-color: #f8f9fa; }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/dashboard">Software Development Document Environment</a>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-danger btn-sm text-white ms-2" href="/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container my-5">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2>Approvals Audit & Report Engine</h2>
+            <p class="text-muted">Generate and download comprehensive registration and workflow logs for checkers and compliance controllers.</p>
+        </div>
+        <div class="col-md-4 text-end">
+            <a href="/reports/download/excel" class="btn btn-success me-2">Download Excel Report</a>
+            <a href="/reports/download/pdf" class="btn btn-danger">Download PDF Report</a>
+        </div>
+    </div>
+
+    <!-- Live online report table view -->
+    <div class="card shadow-sm bg-white">
+        <div class="card-header bg-primary text-white fw-bold">Online Report Viewer</div>
+        <div class="card-body p-0">
+            <table class="table table-striped align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>ID</th>
+                        <th>App Code</th>
+                        <th>Doc ID</th>
+                        <th>Deliverable Name</th>
+                        <th>File Name</th>
+                        <th>Status</th>
+                        <th>Maker Username</th>
+                        <th>Checker Username</th>
+                        <th>Registration Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="sub : ${submissions}">
+                        <td th:text="${sub.id}">ID</td>
+                        <td class="fw-bold" th:text="${sub.appCode}">App Code</td>
+                        <td th:text="${sub.documentDeliverable != null ? sub.documentDeliverable.docId : 'N/A'}">Doc ID</td>
+                        <td th:text="${sub.documentDeliverable != null ? sub.documentDeliverable.name : 'N/A'}">Deliverable</td>
+                        <td th:text="${sub.fileName}">File</td>
+                        <td>
+                            <span class="badge" th:classappend="${sub.status == 'APPROVED'} ? 'bg-success' : (${sub.status == 'REJECTED'} ? 'bg-danger' : 'bg-warning text-dark')" th:text="${sub.status}">Status</span>
+                        </td>
+                        <td th:text="${sub.makerUsername}">Maker</td>
+                        <td th:text="${sub.checkerUsername != null ? sub.checkerUsername : 'N/A'}">Checker</td>
+                        <td th:text="${#temporals.format(sub.createdAt, 'yyyy-MM-dd HH:mm:ss')}">Time</td>
+                    </tr>
+                    <tr th:if="${#lists.isEmpty(submissions)}">
+                        <td colspan="9" class="text-center text-muted py-4">No logged document deliverable registrations found.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

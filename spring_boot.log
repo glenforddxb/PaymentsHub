@@ -1,0 +1,603 @@
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/io/github/git-commit-id/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/flywaydb/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/jooq/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/maven-metadata.xml
+Progress (1): 255 BProgress (2): 255 B | 398 BProgress (3): 255 B | 398 B | 249 BProgress (4): 255 B | 398 B | 249 B | 234 B                                           Downloaded from central: https://repo.maven.apache.org/maven2/org/jooq/maven-metadata.xml (398 B at 722 B/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/flywaydb/maven-metadata.xml (234 B at 423 B/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/maven-metadata.xml (249 B at 451 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/liquibase/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/graalvm/buildtools/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/maven-metadata.xml
+Downloaded from central: https://repo.maven.apache.org/maven2/io/github/git-commit-id/maven-metadata.xml (255 B at 456 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-metadata.xml
+Progress (1): 394 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/liquibase/maven-metadata.xml (394 B at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/maven-metadata.xml
+Progress (1): 242 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/graalvm/buildtools/maven-metadata.xml (242 B at 7.3 kB/s)
+Progress (1): 4.6 kBProgress (1): 9.7 kBProgress (2): 9.7 kB | 375 B                            Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/maven-metadata.xml (375 B at 9.4 kB/s)
+Progress (1): 14 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-metadata.xml (14 kB at 340 kB/s)
+Progress (1): 3.7 kBProgress (1): 7.5 kBProgress (1): 13 kB Progress (1): 19 kBProgress (1): 20 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/maven-metadata.xml (20 kB at 579 kB/s)
+[INFO]
+[INFO] ------------------------< com.cth.sdm:sdm-app >-------------------------
+[INFO] Building Software Development Document Environment 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] >>> spring-boot:3.2.4:run (default-cli) > test-compile @ sdm-app >>>
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ sdm-app ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 8 resources from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.11.0:compile (default-compile) @ sdm-app ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 28 source files with javac [debug release 21] to target/classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ sdm-app ---
+[INFO] skip non existing resourceDirectory /app/src/test/resources
+[INFO]
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ sdm-app ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 2 source files with javac [debug release 21] to target/test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO]
+[INFO] <<< spring-boot:3.2.4:run (default-cli) < test-compile @ sdm-app <<<
+[INFO]
+[INFO]
+[INFO] --- spring-boot:3.2.4:run (default-cli) @ sdm-app ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2026-08-02T03:16:33.814Z  INFO 89037 --- [Software Development Document Environment] [           main] com.cth.sdm.SdmApplication               : Starting SdmApplication using Java 21.0.10 with PID 89037 (/app/target/classes started by jules in /app)
+2026-08-02T03:16:33.817Z  INFO 89037 --- [Software Development Document Environment] [           main] com.cth.sdm.SdmApplication               : The following 1 profile is active: "default"
+2026-08-02T03:16:34.756Z  INFO 89037 --- [Software Development Document Environment] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-02T03:16:34.880Z  INFO 89037 --- [Software Development Document Environment] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 5 JPA repository interfaces.
+2026-08-02T03:16:35.531Z  INFO 89037 --- [Software Development Document Environment] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-02T03:16:35.546Z  INFO 89037 --- [Software Development Document Environment] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-02T03:16:35.547Z  INFO 89037 --- [Software Development Document Environment] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-08-02T03:16:35.615Z  INFO 89037 --- [Software Development Document Environment] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-02T03:16:35.616Z  INFO 89037 --- [Software Development Document Environment] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1748 ms
+2026-08-02T03:16:35.817Z  INFO 89037 --- [Software Development Document Environment] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-02T03:16:35.876Z  INFO 89037 --- [Software Development Document Environment] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-08-02T03:16:35.913Z  INFO 89037 --- [Software Development Document Environment] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-02T03:16:36.158Z  INFO 89037 --- [Software Development Document Environment] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-02T03:16:36.187Z  INFO 89037 --- [Software Development Document Environment] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-02T03:16:36.689Z  INFO 89037 --- [Software Development Document Environment] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:sdmdb user=SA
+2026-08-02T03:16:36.691Z  INFO 89037 --- [Software Development Document Environment] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-02T03:16:36.717Z  WARN 89037 --- [Software Development Document Environment] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-02T03:16:37.791Z  INFO 89037 --- [Software Development Document Environment] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate:
+    create table document_deliverables (
+        id bigint generated by default as identity,
+        description varchar(2000),
+        doc_code varchar(255),
+        doc_id varchar(255) not null,
+        name varchar(255) not null,
+        version varchar(255),
+        phase_id bigint not null,
+        primary key (id)
+    )
+Hibernate:
+    create table document_submissions (
+        id bigint generated by default as identity,
+        app_code varchar(3) not null,
+        approved_at timestamp(6),
+        checker_username varchar(255),
+        created_at timestamp(6),
+        file_name varchar(255) not null,
+        file_path varchar(255),
+        maker_username varchar(255) not null,
+        parsed_content varchar(1000000),
+        status varchar(255),
+        doc_deliverable_id bigint,
+        primary key (id)
+    )
+Hibernate:
+    create table phases (
+        id bigint generated by default as identity,
+        name varchar(255) not null,
+        phase_number integer not null,
+        primary key (id)
+    )
+Hibernate:
+    create table roles (
+        id bigint generated by default as identity,
+        name varchar(255) not null,
+        primary key (id)
+    )
+Hibernate:
+    create table user_roles (
+        user_id bigint not null,
+        role_id bigint not null,
+        primary key (user_id, role_id)
+    )
+Hibernate:
+    create table users (
+        id bigint generated by default as identity,
+        created_at timestamp(6),
+        email varchar(255),
+        is_enabled boolean not null,
+        is_ldap boolean not null,
+        is_locked boolean not null,
+        mfa_enabled boolean not null,
+        password varchar(255) not null,
+        password_reset_required boolean not null,
+        username varchar(255) not null,
+        primary key (id)
+    )
+Hibernate:
+    alter table if exists document_deliverables
+       drop constraint if exists UK_pgq2x4n9xv7q7cqmlpp5l3dte
+Hibernate:
+    alter table if exists document_deliverables
+       add constraint UK_pgq2x4n9xv7q7cqmlpp5l3dte unique (doc_id)
+Hibernate:
+    alter table if exists phases
+       drop constraint if exists UK_frjgoijou074da9ors7f0j2ng
+Hibernate:
+    alter table if exists phases
+       add constraint UK_frjgoijou074da9ors7f0j2ng unique (phase_number)
+Hibernate:
+    alter table if exists roles
+       drop constraint if exists UK_ofx66keruapi6vyqpv6f2or37
+Hibernate:
+    alter table if exists roles
+       add constraint UK_ofx66keruapi6vyqpv6f2or37 unique (name)
+Hibernate:
+    alter table if exists users
+       drop constraint if exists UK_r43af9ap4edm43mmtq01oddj6
+Hibernate:
+    alter table if exists users
+       add constraint UK_r43af9ap4edm43mmtq01oddj6 unique (username)
+Hibernate:
+    alter table if exists document_deliverables
+       add constraint FK7s541ixbib5pydx5sob6n6pyt
+       foreign key (phase_id)
+       references phases
+Hibernate:
+    alter table if exists document_submissions
+       add constraint FK30rkqmscqsbil6gntod0dp1vb
+       foreign key (doc_deliverable_id)
+       references document_deliverables
+Hibernate:
+    alter table if exists user_roles
+       add constraint FKh8ciramu9cc9q3qcqiv4ue8a6
+       foreign key (role_id)
+       references roles
+Hibernate:
+    alter table if exists user_roles
+       add constraint FKhfh9dx7w3ubf1co1vdev94g3f
+       foreign key (user_id)
+       references users
+2026-08-02T03:16:37.881Z  INFO 89037 --- [Software Development Document Environment] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Hibernate:
+    select
+        count(*)
+    from
+        roles r1_0
+Hibernate:
+    insert
+    into
+        roles
+        (name, id)
+    values
+        (?, default)
+Hibernate:
+    insert
+    into
+        roles
+        (name, id)
+    values
+        (?, default)
+Hibernate:
+    insert
+    into
+        roles
+        (name, id)
+    values
+        (?, default)
+Hibernate:
+    select
+        count(*)
+    from
+        users u1_0
+Hibernate:
+    select
+        r1_0.id,
+        r1_0.name
+    from
+        roles r1_0
+    where
+        r1_0.name=?
+Hibernate:
+    select
+        r1_0.id,
+        r1_0.name
+    from
+        roles r1_0
+    where
+        r1_0.name=?
+Hibernate:
+    select
+        r1_0.id,
+        r1_0.name
+    from
+        roles r1_0
+    where
+        r1_0.name=?
+Hibernate:
+    insert
+    into
+        users
+        (created_at, email, is_enabled, is_ldap, is_locked, mfa_enabled, password, password_reset_required, username, id)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        user_roles
+        (user_id, role_id)
+    values
+        (?, ?)
+Hibernate:
+    insert
+    into
+        user_roles
+        (user_id, role_id)
+    values
+        (?, ?)
+Hibernate:
+    insert
+    into
+        user_roles
+        (user_id, role_id)
+    values
+        (?, ?)
+Hibernate:
+    insert
+    into
+        users
+        (created_at, email, is_enabled, is_ldap, is_locked, mfa_enabled, password, password_reset_required, username, id)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        user_roles
+        (user_id, role_id)
+    values
+        (?, ?)
+Hibernate:
+    insert
+    into
+        users
+        (created_at, email, is_enabled, is_ldap, is_locked, mfa_enabled, password, password_reset_required, username, id)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        user_roles
+        (user_id, role_id)
+    values
+        (?, ?)
+Hibernate:
+    select
+        count(*)
+    from
+        phases p1_0
+2026-08-02T03:16:39.293Z  INFO 89037 --- [Software Development Document Environment] [           main] com.cth.sdm.service.PhaseSeedService     : Seeding 7 SDLC Phases and Document Deliverables...
+Hibernate:
+    insert
+    into
+        phases
+        (name, phase_number, id)
+    values
+        (?, ?, default)
+Hibernate:
+    insert
+    into
+        phases
+        (name, phase_number, id)
+    values
+        (?, ?, default)
+Hibernate:
+    insert
+    into
+        phases
+        (name, phase_number, id)
+    values
+        (?, ?, default)
+Hibernate:
+    insert
+    into
+        phases
+        (name, phase_number, id)
+    values
+        (?, ?, default)
+Hibernate:
+    insert
+    into
+        phases
+        (name, phase_number, id)
+    values
+        (?, ?, default)
+Hibernate:
+    insert
+    into
+        phases
+        (name, phase_number, id)
+    values
+        (?, ?, default)
+Hibernate:
+    insert
+    into
+        phases
+        (name, phase_number, id)
+    values
+        (?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate:
+    insert
+    into
+        document_deliverables
+        (description, doc_code, doc_id, name, phase_id, version, id)
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2026-08-02T03:16:39.356Z  INFO 89037 --- [Software Development Document Environment] [           main] com.cth.sdm.service.PhaseSeedService     : 7 SDLC Phases and Deliverables seeded successfully.
+2026-08-02T03:16:39.522Z  WARN 89037 --- [Software Development Document Environment] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-02T03:16:39.896Z  INFO 89037 --- [Software Development Document Environment] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@71c9c7f3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6979e9b8, org.springframework.security.web.context.SecurityContextHolderFilter@20072ff1, org.springframework.security.web.header.HeaderWriterFilter@5d96b0f, org.springframework.web.filter.CorsFilter@771deee6, org.springframework.security.web.authentication.logout.LogoutFilter@4cf99283, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7f77d839, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38ed9fb2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3bde85b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@345effd7, org.springframework.security.web.access.ExceptionTranslationFilter@4a23be9, org.springframework.security.web.access.intercept.AuthorizationFilter@7aa4ef24]
+2026-08-02T03:16:40.208Z  INFO 89037 --- [Software Development Document Environment] [           main] o.s.l.c.support.AbstractContextSource    : Property 'userDn' not set - anonymous context will be used for read-only operations
+2026-08-02T03:16:40.287Z  INFO 89037 --- [Software Development Document Environment] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-08-02T03:16:40.303Z  INFO 89037 --- [Software Development Document Environment] [           main] com.cth.sdm.SdmApplication               : Started SdmApplication in 6.966 seconds (process running for 7.349)
+2026-08-02T03:21:26.249Z  INFO 89037 --- [Software Development Document Environment] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-02T03:21:26.250Z  INFO 89037 --- [Software Development Document Environment] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-02T03:21:26.252Z  INFO 89037 --- [Software Development Document Environment] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.is_enabled,
+        u1_0.is_ldap,
+        u1_0.is_locked,
+        u1_0.mfa_enabled,
+        u1_0.password,
+        u1_0.password_reset_required,
+        u1_0.username
+    from
+        users u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name
+    from
+        user_roles r1_0
+    join
+        roles r1_1
+            on r1_1.id=r1_0.role_id
+    where
+        r1_0.user_id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+Hibernate:
+    select
+        dd1_0.id,
+        dd1_0.description,
+        dd1_0.doc_code,
+        dd1_0.doc_id,
+        dd1_0.name,
+        dd1_0.phase_id,
+        dd1_0.version
+    from
+        document_deliverables dd1_0
+Hibernate:
+    select
+        ds1_0.id,
+        ds1_0.app_code,
+        ds1_0.approved_at,
+        ds1_0.checker_username,
+        ds1_0.created_at,
+        ds1_0.doc_deliverable_id,
+        ds1_0.file_name,
+        ds1_0.file_path,
+        ds1_0.maker_username,
+        ds1_0.parsed_content,
+        ds1_0.status
+    from
+        document_submissions ds1_0

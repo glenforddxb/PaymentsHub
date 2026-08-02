@@ -1,0 +1,34 @@
+<<<<<<< SEARCH
+            <form th:action="@{/login}" method="post">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" name="username" class="form-control" required placeholder="Enter username">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" required placeholder="Enter password">
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 py-2">Sign In</button>
+            </form>
+=======
+            <div th:if="${param.registered}" class="alert alert-success" role="alert">
+                Account successfully created! You can now log in.
+            </div>
+
+            <form th:action="@{/login}" method="post">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" name="username" class="form-control" required placeholder="Enter username">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" required placeholder="Enter password">
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 py-2">Sign In</button>
+            </form>
+            <div class="text-center mt-3">
+                <a href="/register" class="btn btn-outline-secondary btn-sm w-100">Create New Maker Account</a>
+            </div>
+>>>>>>> REPLACE

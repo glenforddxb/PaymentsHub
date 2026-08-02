@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin System Settings - Software Development Document Environment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/dashboard">Software Development Document Environment</a>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-danger btn-sm text-white ms-2" href="/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container my-5">
+    <div class="row">
+        <!-- Configuration Toggles Side Panel -->
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white fw-bold">System Configuration Switchboard</div>
+                <div class="card-body">
+                    <!-- LDAP Toggle -->
+                    <form action="/admin/toggle-ldap" method="post" class="mb-4">
+                        <label class="form-label fw-bold">Dual Authentication Strategy</label>
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="ldapToggle" name="ldap" th:checked="${ldapEnabled}" onchange="this.form.submit()">
+                            <label class="form-check-label" for="ldapToggle">Simulated Active Directory LDAP Login</label>
+                        </div>
+                        <small class="text-muted d-block">Simulate dual LDAP Active Directory or standard DB logins from frontend.</small>
+                    </form>
+
+                    <!-- SMS/Email MFA Toggle -->
+                    <form action="/admin/toggle-mfa" method="post" class="mb-4">
+                        <label class="form-label fw-bold">SMS / Email Verification Security</label>
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="mfaToggle" name="mfa" th:checked="${mfaEnabled}" onchange="this.form.submit()">
+                            <label class="form-check-label" for="mfaToggle">Multi-Factor SMS/Email OTP Code</label>
+                        </div>
+                        <small class="text-muted d-block">Toggle simulation of sending an SMS/Email OTP code upon account creation.</small>
+                    </form>
+
+                    <!-- Checker Notification Toggle -->
+                    <form action="/admin/toggle-notifications" method="post">
+                        <label class="form-label fw-bold">Approver Email / SMS Broadcast</label>
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="notifToggle" name="notifications" th:checked="${notificationsEnabled}" onchange="this.form.submit()">
+                            <label class="form-check-label" for="notifToggle">Broadcast Alerts on Submission</label>
+                        </div>
+                        <small class="text-muted d-block">Notify approvers via simulated email/sms automatically when a document is submitted.</small>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Accounts Maintenance Panel -->
+        <div class="col-md-8">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-dark text-white fw-bold">User Access Maintenance Control</div>
+                <div class="card-body p-0">
+                    <table class="table table-striped align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>LDAP User</th>
+                                <th>Locked</th>
+                                <th style="width: 280px;">Security Operations</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="u : ${users}">
+                                <td class="fw-bold" th:text="${u.username}">Username</td>
+                                <td th:text="${u.email}">Email</td>
+                                <td th:text="${u.isLdap ? 'Yes' : 'No'}">LDAP</td>
+                                <td th:text="${u.isLocked ? 'Yes' : 'No'}">Locked</td>
+                                <td>
+                                    <!-- Lock/Unlock toggles -->
+                                    <form action="/admin/user/lock" method="post" class="d-inline" th:if="${!u.isLocked}">
+                                        <input type="hidden" name="userId" th:value="${u.id}">
+                                        <button type="submit" class="btn btn-warning btn-sm">Lock Account</button>
+                                    </form>
+                                    <form action="/admin/user/unlock" method="post" class="d-inline" th:if="${u.isLocked}">
+                                        <input type="hidden" name="userId" th:value="${u.id}">
+                                        <button type="submit" class="btn btn-success btn-sm text-white">Unlock</button>
+                                    </form>
+
+                                    <!-- Password Reset -->
+                                    <form action="/admin/user/reset" method="post" class="d-inline">
+                                        <input type="hidden" name="userId" th:value="${u.id}">
+                                        <button type="submit" class="btn btn-secondary btn-sm ms-1">Reset Password</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Configuration / Document Template Upload menu (for admin users only) -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-secondary text-white fw-bold">Deliverable Configuration & Template Configuration</div>
+                <div class="card-body">
+                    <p class="text-muted"><small>Admins can upload document templates and update description structures for each deliverable item across all 7 SDLC phases.</small></p>
+
+                    <form action="/admin/template/upload" method="post">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Deliverable Select</label>
+                                <select name="docId" class="form-select" required>
+                                    <option th:each="d : ${deliverables}" th:value="${d.docId}" th:text="${d.docId} + ' - ' + ${d.name}"></option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <label class="form-label">Configurable Description</label>
+                                <input type="text" name="description" class="form-control" required placeholder="Enter updated description">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Version Target</label>
+                                <input type="text" name="version" class="form-control" required placeholder="e.g. 1.1">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Upload Template & Save Properties</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
