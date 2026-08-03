@@ -601,3 +601,654 @@ Hibernate:
         ds1_0.status
     from
         document_submissions ds1_0
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.is_enabled,
+        u1_0.is_ldap,
+        u1_0.is_locked,
+        u1_0.mfa_enabled,
+        u1_0.password,
+        u1_0.password_reset_required,
+        u1_0.username
+    from
+        users u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name
+    from
+        user_roles r1_0
+    join
+        roles r1_1
+            on r1_1.id=r1_0.role_id
+    where
+        r1_0.user_id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+Hibernate:
+    select
+        dd1_0.id,
+        dd1_0.description,
+        dd1_0.doc_code,
+        dd1_0.doc_id,
+        dd1_0.name,
+        dd1_0.phase_id,
+        dd1_0.version
+    from
+        document_deliverables dd1_0
+Hibernate:
+    select
+        ds1_0.id,
+        ds1_0.app_code,
+        ds1_0.approved_at,
+        ds1_0.checker_username,
+        ds1_0.created_at,
+        ds1_0.doc_deliverable_id,
+        ds1_0.file_name,
+        ds1_0.file_path,
+        ds1_0.maker_username,
+        ds1_0.parsed_content,
+        ds1_0.status
+    from
+        document_submissions ds1_0
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.is_enabled,
+        u1_0.is_ldap,
+        u1_0.is_locked,
+        u1_0.mfa_enabled,
+        u1_0.password,
+        u1_0.password_reset_required,
+        u1_0.username
+    from
+        users u1_0
+Hibernate:
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name
+    from
+        user_roles r1_0
+    join
+        roles r1_1
+            on r1_1.id=r1_0.role_id
+    where
+        r1_0.user_id=?
+Hibernate:
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name
+    from
+        user_roles r1_0
+    join
+        roles r1_1
+            on r1_1.id=r1_0.role_id
+    where
+        r1_0.user_id=?
+Hibernate:
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name
+    from
+        user_roles r1_0
+    join
+        roles r1_1
+            on r1_1.id=r1_0.role_id
+    where
+        r1_0.user_id=?
+Hibernate:
+    select
+        dd1_0.id,
+        dd1_0.description,
+        dd1_0.doc_code,
+        dd1_0.doc_id,
+        dd1_0.name,
+        dd1_0.phase_id,
+        dd1_0.version
+    from
+        document_deliverables dd1_0
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        ds1_0.id,
+        ds1_0.app_code,
+        ds1_0.approved_at,
+        ds1_0.checker_username,
+        ds1_0.created_at,
+        ds1_0.doc_deliverable_id,
+        ds1_0.file_name,
+        ds1_0.file_path,
+        ds1_0.maker_username,
+        ds1_0.parsed_content,
+        ds1_0.status
+    from
+        document_submissions ds1_0
+    where
+        ds1_0.status=?
+Hibernate:
+    select
+        ds1_0.id,
+        ds1_0.app_code,
+        ds1_0.approved_at,
+        ds1_0.checker_username,
+        ds1_0.created_at,
+        ds1_0.doc_deliverable_id,
+        ds1_0.file_name,
+        ds1_0.file_path,
+        ds1_0.maker_username,
+        ds1_0.parsed_content,
+        ds1_0.status
+    from
+        document_submissions ds1_0
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.is_enabled,
+        u1_0.is_ldap,
+        u1_0.is_locked,
+        u1_0.mfa_enabled,
+        u1_0.password,
+        u1_0.password_reset_required,
+        u1_0.username
+    from
+        users u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name
+    from
+        user_roles r1_0
+    join
+        roles r1_1
+            on r1_1.id=r1_0.role_id
+    where
+        r1_0.user_id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+Hibernate:
+    select
+        dd1_0.id,
+        dd1_0.description,
+        dd1_0.doc_code,
+        dd1_0.doc_id,
+        dd1_0.name,
+        dd1_0.phase_id,
+        dd1_0.version
+    from
+        document_deliverables dd1_0
+Hibernate:
+    select
+        ds1_0.id,
+        ds1_0.app_code,
+        ds1_0.approved_at,
+        ds1_0.checker_username,
+        ds1_0.created_at,
+        ds1_0.doc_deliverable_id,
+        ds1_0.file_name,
+        ds1_0.file_path,
+        ds1_0.maker_username,
+        ds1_0.parsed_content,
+        ds1_0.status
+    from
+        document_submissions ds1_0
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.is_enabled,
+        u1_0.is_ldap,
+        u1_0.is_locked,
+        u1_0.mfa_enabled,
+        u1_0.password,
+        u1_0.password_reset_required,
+        u1_0.username
+    from
+        users u1_0
+Hibernate:
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name
+    from
+        user_roles r1_0
+    join
+        roles r1_1
+            on r1_1.id=r1_0.role_id
+    where
+        r1_0.user_id=?
+Hibernate:
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name
+    from
+        user_roles r1_0
+    join
+        roles r1_1
+            on r1_1.id=r1_0.role_id
+    where
+        r1_0.user_id=?
+Hibernate:
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name
+    from
+        user_roles r1_0
+    join
+        roles r1_1
+            on r1_1.id=r1_0.role_id
+    where
+        r1_0.user_id=?
+Hibernate:
+    select
+        dd1_0.id,
+        dd1_0.description,
+        dd1_0.doc_code,
+        dd1_0.doc_id,
+        dd1_0.name,
+        dd1_0.phase_id,
+        dd1_0.version
+    from
+        document_deliverables dd1_0
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        ds1_0.id,
+        ds1_0.app_code,
+        ds1_0.approved_at,
+        ds1_0.checker_username,
+        ds1_0.created_at,
+        ds1_0.doc_deliverable_id,
+        ds1_0.file_name,
+        ds1_0.file_path,
+        ds1_0.maker_username,
+        ds1_0.parsed_content,
+        ds1_0.status
+    from
+        document_submissions ds1_0
+    where
+        ds1_0.status=?
+Hibernate:
+    select
+        ds1_0.id,
+        ds1_0.app_code,
+        ds1_0.approved_at,
+        ds1_0.checker_username,
+        ds1_0.created_at,
+        ds1_0.doc_deliverable_id,
+        ds1_0.file_name,
+        ds1_0.file_path,
+        ds1_0.maker_username,
+        ds1_0.parsed_content,
+        ds1_0.status
+    from
+        document_submissions ds1_0
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.is_enabled,
+        u1_0.is_ldap,
+        u1_0.is_locked,
+        u1_0.mfa_enabled,
+        u1_0.password,
+        u1_0.password_reset_required,
+        u1_0.username
+    from
+        users u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name
+    from
+        user_roles r1_0
+    join
+        roles r1_1
+            on r1_1.id=r1_0.role_id
+    where
+        r1_0.user_id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+Hibernate:
+    select
+        dd1_0.id,
+        dd1_0.description,
+        dd1_0.doc_code,
+        dd1_0.doc_id,
+        dd1_0.name,
+        dd1_0.phase_id,
+        dd1_0.version
+    from
+        document_deliverables dd1_0
+Hibernate:
+    select
+        ds1_0.id,
+        ds1_0.app_code,
+        ds1_0.approved_at,
+        ds1_0.checker_username,
+        ds1_0.created_at,
+        ds1_0.doc_deliverable_id,
+        ds1_0.file_name,
+        ds1_0.file_path,
+        ds1_0.maker_username,
+        ds1_0.parsed_content,
+        ds1_0.status
+    from
+        document_submissions ds1_0
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.is_enabled,
+        u1_0.is_ldap,
+        u1_0.is_locked,
+        u1_0.mfa_enabled,
+        u1_0.password,
+        u1_0.password_reset_required,
+        u1_0.username
+    from
+        users u1_0
+Hibernate:
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name
+    from
+        user_roles r1_0
+    join
+        roles r1_1
+            on r1_1.id=r1_0.role_id
+    where
+        r1_0.user_id=?
+Hibernate:
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name
+    from
+        user_roles r1_0
+    join
+        roles r1_1
+            on r1_1.id=r1_0.role_id
+    where
+        r1_0.user_id=?
+Hibernate:
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name
+    from
+        user_roles r1_0
+    join
+        roles r1_1
+            on r1_1.id=r1_0.role_id
+    where
+        r1_0.user_id=?
+Hibernate:
+    select
+        dd1_0.id,
+        dd1_0.description,
+        dd1_0.doc_code,
+        dd1_0.doc_id,
+        dd1_0.name,
+        dd1_0.phase_id,
+        dd1_0.version
+    from
+        document_deliverables dd1_0
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.name,
+        p1_0.phase_number
+    from
+        phases p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        ds1_0.id,
+        ds1_0.app_code,
+        ds1_0.approved_at,
+        ds1_0.checker_username,
+        ds1_0.created_at,
+        ds1_0.doc_deliverable_id,
+        ds1_0.file_name,
+        ds1_0.file_path,
+        ds1_0.maker_username,
+        ds1_0.parsed_content,
+        ds1_0.status
+    from
+        document_submissions ds1_0
+    where
+        ds1_0.status=?
+Hibernate:
+    select
+        ds1_0.id,
+        ds1_0.app_code,
+        ds1_0.approved_at,
+        ds1_0.checker_username,
+        ds1_0.created_at,
+        ds1_0.doc_deliverable_id,
+        ds1_0.file_name,
+        ds1_0.file_path,
+        ds1_0.maker_username,
+        ds1_0.parsed_content,
+        ds1_0.status
+    from
+        document_submissions ds1_0
