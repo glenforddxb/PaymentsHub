@@ -145,8 +145,7 @@ public class WebController {
                 .filter(u -> u.getId().equals(userId))
                 .findFirst()
                 .ifPresent(u -> {
-                    u.setPassword("password");
-                    userService.updateUser(u);
+                    userService.resetPassword(u, "password");
                 });
         return "redirect:/admin";
     }

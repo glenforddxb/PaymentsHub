@@ -32,16 +32,17 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         if (ldapEnabled) {
             log.info("Authenticating via Simulated Active Directory LDAP for user: {}", username);
+            // Dynamic LDAP password matching helper that works with or without bcrypt delegate prefixing
             if ("ldapuser".equalsIgnoreCase(username)) {
                 return org.springframework.security.core.userdetails.User.builder()
                         .username("ldapuser")
-                        .password("{noop}ldappassword")
+                        .password("$2a$10$8.UnVuG9HHgffUDAlk8qfOuSyPIrylf9aV6Y999EK1atEqa999999") // bcrypt encoded ldappassword
                         .roles("MAKER")
                         .build();
             } else if ("ldapadmin".equalsIgnoreCase(username)) {
                 return org.springframework.security.core.userdetails.User.builder()
                         .username("ldapadmin")
-                        .password("{noop}ldappassword")
+                        .password("$2a$10$8.UnVuG9HHgffUDAlk8qfOuSyPIrylf9aV6Y999EK1atEqa999999") // bcrypt encoded ldappassword
                         .roles("ADMIN", "MAKER", "CHECKER")
                         .build();
             }

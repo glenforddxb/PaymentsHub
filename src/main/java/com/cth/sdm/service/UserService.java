@@ -82,6 +82,11 @@ public class UserService {
         userRepository.save(user);
     }
 
+    public void resetPassword(User user, String rawPassword) {
+        user.setPassword(passwordEncoder.encode(rawPassword));
+        userRepository.save(user);
+    }
+
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
