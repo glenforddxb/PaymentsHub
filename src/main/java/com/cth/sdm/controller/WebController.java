@@ -127,6 +127,28 @@ public class WebController {
         return "redirect:/admin";
     }
 
+    @PostMapping("/admin/user/create")
+    public String adminCreateUser(@RequestParam String username,
+                                  @RequestParam String email,
+                                  @RequestParam String password,
+                                  @RequestParam String role) {
+        User user = User.builder()
+                .username(username)
+                .email(email)
+                .password(password)
+                .isEnabled(true)
+                .isLocked(false)
+                .build();
+        userService.createUser(user, role);
+        return "redirect:/admin";
+    }
+
+    @PostMapping("/admin/user/delete")
+    public String adminDeleteUser(@RequestParam Long userId) {
+        userService.deleteUser(userId);
+        return "redirect:/admin";
+    }
+
     @PostMapping("/admin/user/unlock")
     public String unlockUser(@RequestParam Long userId) {
         userService.findAll().stream()
